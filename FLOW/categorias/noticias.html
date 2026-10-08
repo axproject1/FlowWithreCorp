@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias — Flow Withre Corp</title>
+  <meta name="description" content="Actualidad y lo más relevante de la comunidad Flow Withre Corp.">
+  <link rel="icon" type="image/png" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/categorias.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --hero-gradient: linear-gradient(135deg, rgba(0,245,255,0.25) 0%, rgba(6,6,16,0.95) 65%);
+      --hero-title-gradient: linear-gradient(135deg, #fff, var(--neon-cyan));
+      --label-bg: rgba(0,245,255,0.12);
+      --label-color: #00f5ff;
+      --label-border: rgba(0,245,255,0.3);
+      --feat-bg: linear-gradient(135deg, #001a2e, #002d45);
+      --card-bg: linear-gradient(135deg, #001020, #002030);
+    }
+    .cat-orb-1 { background: rgba(0,245,255,1); }
+    .cat-orb-2 { background: rgba(191,90,242,1); }
+  </style>
+</head>
+<body>
+  <canvas id="liquid-canvas"></canvas>
+
+  <header>
+    <div class="brand">
+      <img src="../img/logo.png" alt="Logo Flow Withre">
+      <h1>Flow Withre</h1>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav id="navbar">
+      <a href="../index.html" class="cat-nav-back"><i class="fas fa-arrow-left"></i> Inicio</a>
+      <a href="../index.html#categorias"><i class="fas fa-th-large"></i> Categorías</a>
+      <a href="../index.html#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+      <button class="btn-member" id="open-modal"><i class="fas fa-crown"></i> Miembro</button>
+    </nav>
+  </header>
+
+  <section class="cat-hero">
+    <div class="cat-orb cat-orb-1"></div>
+    <div class="cat-orb cat-orb-2"></div>
+    <div class="cat-hero-content">
+      <div class="cat-hero-badge"><i class="fas fa-newspaper"></i> Noticias</div>
+      <h1>Actualidad al Instante</h1>
+      <p>Las noticias más importantes de tecnología, cultura, sociedad y todo lo que mueve al mundo hoy.</p>
+    </div>
+  </section>
+
+  <section class="articles-section">
+    <div class="section-header">
+      <h2>Destacado</h2>
+      <span class="section-tag">Breaking</span>
+    </div>
+    <div class="article-featured">
+      <div class="article-featured-img">
+        <i class="fas fa-globe" style="font-size:6rem; color:rgba(0,245,255,0.6);"></i>
+      </div>
+      <div class="article-featured-body">
+        <span class="article-label"><i class="fas fa-bolt"></i> Urgente</span>
+        <h3>Inteligencia Artificial cambia el paradigma del trabajo global en 2025</h3>
+        <p>Un nuevo informe del Foro Económico Mundial revela que el 40% de los empleos actuales serán transformados por la IA en los próximos 5 años. ¿Cómo prepararse para el futuro?</p>
+        <div class="article-meta">
+          <span><i class="fas fa-calendar"></i> Oct 2025</span>
+          <span><i class="fas fa-clock"></i> 10 min lectura</span>
+          <span><i class="fas fa-eye"></i> 245K vistas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header" style="margin-top:40px;">
+      <h2>Últimas Noticias</h2>
+      <span class="section-tag">World</span>
+    </div>
+
+    <div class="articles-grid">
+      <div class="article-card">
+        <div class="article-card-img"><i class="fas fa-microchip card-icon-fa" style="color:rgba(0,245,255,0.5);"></i></div>
+        <div class="article-card-body">
+          <span class="article-label">Tecnología</span>
+          <h3>Apple presenta el iPhone 17 con IA integrada y cámara de 108MP</h3>
+          <p>La nueva generación del teléfono más vendido del mundo llega con inteligencia artificial nativa y una cámara revolucionaria.</p>
+          <div class="article-meta" style="margin-bottom:10px;"><span><i class="fas fa-clock"></i> 4 min</span></div>
+          <span class="read-more" style="color:var(--neon-cyan);">Leer más <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-card-img" style="--card-bg:linear-gradient(135deg,#0a2d0a,#1a3d14);"><i class="fas fa-earth-americas card-icon-fa" style="color:rgba(48,209,88,0.5);"></i></div>
+        <div class="article-card-body">
+          <span class="article-label" style="--label-bg:rgba(48,209,88,0.15);--label-color:#30d158;--label-border:rgba(48,209,88,0.3);">Medioambiente</span>
+          <h3>Récord mundial: el 40% de la energía global proviene de fuentes renovables</h3>
+          <p>Por primera vez en la historia, las energías limpias superan a los combustibles fósiles en la generación eléctrica mundial.</p>
+          <div class="article-meta" style="margin-bottom:10px;"><span><i class="fas fa-clock"></i> 5 min</span></div>
+          <span class="read-more" style="color:var(--neon-green);">Leer más <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-card-img" style="--card-bg:linear-gradient(135deg,#2d1b00,#3d2400);"><i class="fas fa-rocket card-icon-fa" style="color:rgba(255,107,0,0.5);"></i></div>
+        <div class="article-card-body">
+          <span class="article-label" style="--label-bg:rgba(255,107,0,0.15);--label-color:#ff6b00;--label-border:rgba(255,107,0,0.3);">Espacio</span>
+          <h3>SpaceX Starship completa primer vuelo tripulado a la Luna con éxito</h3>
+          <p>La misión Artemis III marca el regreso de la humanidad a la Luna. Elon Musk celebra el mayor logro de SpaceX.</p>
+          <div class="article-meta" style="margin-bottom:10px;"><span><i class="fas fa-clock"></i> 8 min</span></div>
+          <span class="read-more" style="color:var(--neon-orange);">Leer más <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-card-img" style="--card-bg:linear-gradient(135deg,#2d0a1a,#1a0510);"><i class="fas fa-music card-icon-fa" style="color:rgba(255,45,85,0.5);"></i></div>
+        <div class="article-card-body">
+          <span class="article-label">Cultura</span>
+          <h3>Latin Grammys 2025: Los ganadores y los momentos más memorables</h3>
+          <p>La noche más importante de la música latina celebró a sus grandes figuras con una ceremonia histórica en Miami.</p>
+          <div class="article-meta" style="margin-bottom:10px;"><span><i class="fas fa-clock"></i> 5 min</span></div>
+          <span class="read-more">Leer más <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-card-img" style="--card-bg:linear-gradient(135deg,#1a1200,#2d2000);"><i class="fas fa-coins card-icon-fa" style="color:rgba(255,214,10,0.5);"></i></div>
+        <div class="article-card-body">
+          <span class="article-label" style="--label-bg:rgba(255,214,10,0.15);--label-color:#ffd60a;--label-border:rgba(255,214,10,0.3);">Economía</span>
+          <h3>Bitcoin supera los $120,000 por primera vez en la historia</h3>
+          <p>La principal criptomoneda del mundo rompe todos los récords en un mercado alcista que sorprende a analistas globales.</p>
+          <div class="article-meta" style="margin-bottom:10px;"><span><i class="fas fa-clock"></i> 6 min</span></div>
+          <span class="read-more" style="color:var(--neon-yellow);">Leer más <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-card-img" style="--card-bg:linear-gradient(135deg,#0a1a2d,#12263d);"><i class="fas fa-film card-icon-fa" style="color:rgba(191,90,242,0.5);"></i></div>
+        <div class="article-card-body">
+          <span class="article-label" style="--label-bg:rgba(191,90,242,0.15);--label-color:#bf5af2;--label-border:rgba(191,90,242,0.3);">Entretenimiento</span>
+          <h3>Avengers: Secret Wars recauda $1,500M en su primer fin de semana global</h3>
+          <p>El épico desenlace del UCM bate todos los récords de taquilla y marca el cierre de una era cinematográfica.</p>
+          <div class="article-meta" style="margin-bottom:10px;"><span><i class="fas fa-clock"></i> 4 min</span></div>
+          <span class="read-more" style="color:var(--neon-purple);">Leer más <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner-section">
+    <div class="partner-box">
+      <p class="partner-label"><i class="fas fa-handshake"></i> Socio Estratégico</p>
+      <h2>AX Network Solutions</h2>
+      <p>El motor tecnológico detrás de Flow Withre Corp. Desarrollo web de alto impacto, soluciones digitales y experiencias premium que elevan tu marca.</p>
+      <div class="partner-logo-wrap">
+        <img src="../img/AX Network BLANCO - copia.png" alt="AX Network Solutions">
+      </div>
+      <a href="https://axnetworksolutions.vercel.app/" target="_blank" rel="noopener noreferrer" class="partner-btn">
+        <i class="fas fa-arrow-up-right-from-square"></i> Visitar AX Network Solutions
+      </a>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-container">
+      <div class="footer-section logo-section"><img src="../img/flow withre network cw.png" alt="Logo" class="footer-logo"><p><strong>Flow Withre Corp</strong></p><p class="footer-tagline">Estilo · Actitud · Creatividad</p></div>
+      <div class="footer-section contact-section">
+        <h3><i class="fas fa-envelope-open-text"></i> Contacto</h3>
+        <p><i class="fas fa-at"></i> <a href="mailto:flowwithrecorp@gmail.com">flowwithrecorp@gmail.com</a></p>
+        <div class="dev-credit"><span>Desarrollado por</span><a href="https://axnetworksolutions.vercel.app/" target="_blank" class="dev-link"><img src="../img/AX Network BLANCO - copia.png" alt="AX Network" class="dev-logo"></a></div>
+      </div>
+      <div class="footer-section social-section">
+        <h3><i class="fas fa-share-nodes"></i> Síguenos en:</h3>
+        <div class="social-icons">
+          <a href="https://instagram.com/axnetworkstudio" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" title="Spotify"><i class="fab fa-spotify"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p><i class="fas fa-copyright"></i> 2025 Flow Withre Network Corp. Todos los derechos reservados. &nbsp;|&nbsp; <a href="https://axnetworksolutions.vercel.app/" target="_blank">AX Network Studio</a></p></div>
+  </footer>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close"><i class="fas fa-xmark"></i></button>
+      <div class="modal-badge"><i class="fas fa-crown"></i> Membresía Exclusiva</div>
+      <h2>Únete al Club</h2>
+      <p>Accede a contenido exclusivo, sorteos, eventos anticipados y más beneficios como miembro Flow Withre.</p>
+      <form class="member-form" id="member-form">
+        <div class="form-row">
+          <div class="form-group"><label>Nombre</label><input type="text" placeholder="Tu nombre" required></div>
+          <div class="form-group"><label>Apellido</label><input type="text" placeholder="Tu apellido" required></div>
+        </div>
+        <div class="form-group"><label>Correo electrónico</label><input type="email" placeholder="tu@email.com" required></div>
+        <div class="form-group"><label>País</label><select required><option value="" disabled selected>Selecciona tu país</option><option>Panamá</option><option>México</option><option>Colombia</option><option>Argentina</option><option>Venezuela</option><option>Chile</option><option>España</option><option>Otro</option></select></div>
+        <div class="form-group"><label>Categoría de interés</label><select><option value="" disabled selected>¿Qué te apasiona?</option><option>Noticias</option><option>Gaming</option><option>Autos</option><option>Deportes</option><option>Todo</option></select></div>
+        <div class="form-group"><label>¿Por qué quieres ser miembro? (opcional)</label><textarea placeholder="Cuéntanos un poco sobre ti..."></textarea></div>
+        <button type="submit" class="form-submit"><i class="fas fa-crown"></i> Solicitar Membresía</button>
+      </form>
+      <div class="form-success" id="form-success">
+        <div class="success-icon"><i class="fas fa-check"></i></div>
+        <h3>¡Bienvenido al Club!</h3>
+        <p>Tu solicitud fue recibida. Te contactaremos pronto.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/effects.js"></script>
+  <script>
+    const openBtn=document.getElementById('open-modal'),overlay=document.getElementById('modal-overlay'),closeBtn=document.getElementById('modal-close'),form=document.getElementById('member-form'),success=document.getElementById('form-success');
+    if(openBtn)openBtn.addEventListener('click',()=>overlay.classList.add('open'));
+    if(closeBtn)closeBtn.addEventListener('click',()=>overlay.classList.remove('open'));
+    overlay.addEventListener('click',(e)=>{if(e.target===overlay)overlay.classList.remove('open');});
+    if(form)form.addEventListener('submit',(e)=>{e.preventDefault();form.style.display='none';success.style.display='flex';});
+  </script>
+</body>
+</html>
