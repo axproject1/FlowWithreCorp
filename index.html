@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flow Withre Corp — Estilo, Actitud y Creatividad</title>
+  <meta name="description"
+    content="Flow Withre Corp — Plataforma independiente de contenido digital. Donde el estilo, la actitud y la creatividad se encuentran en Gaming, Autos, Deportes y Cultura Urbana.">
+
+  <!-- Icono de la pestaña -->
+  <link rel="icon" type="image/png" href="img/logo-white-version.png">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Fonts: Outfit & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ===== SUBTLE AMBIENT CANVAS ===== -->
+  <canvas id="liquid-canvas"></canvas>
+
+  <!-- ===== PRELOADER MINIMALISTA ===== -->
+  <div id="preloader">
+    <div class="preloader-brand">
+      <img src="img/logo-white-version.png" alt="Logo Flow Withre" class="preloader-logo">
+    </div>
+    <div class="loader-line">
+      <div class="loader-fill"></div>
+    </div>
+    <p>Cargando Flow Withre...</p>
+    <button id="access-btn">
+      <i class="fas fa-bolt"></i> Acceder
+    </button>
+  </div>
+
+  <!-- ===== HEADER MINIMALISTA ===== -->
+  <header>
+    <a href="#inicio" class="brand">
+      <!-- 🎨 LOGO OFICIAL (Con texto blanco de alto contraste para fondo oscuro) -->
+      <img src="img/logo-white-version.png" alt="Logo Flow Withre">
+      <div class="brand-text">
+        <span class="brand-title">Flow Withre</span>
+        <span class="brand-subtitle">Media & Culture</span>
+      </div>
+    </a>
+
+    <!-- Botón móvil hamburguesa -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Menú de navegación principal -->
+    <nav id="navbar">
+      <a href="#inicio"><i class="fas fa-house"></i> Inicio</a>
+      <a href="#nosotros"><i class="fas fa-circle-info"></i> Nosotros</a>
+      <a href="#mascota"><i class="fas fa-crown"></i> Personaje</a>
+      <a href="#socios"><i class="fas fa-handshake"></i> Socios</a>
+      <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+      <button class="btn-member" id="open-modal"><i class="fas fa-crown"></i> Club Miembro</button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION (CLEAN MINIMALIST SPLIT) ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-left">
+      <div class="hero-pill-badge">
+        <span class="badge-pulse"></span>
+        NUEVA ERA · FLOW WITHRE CORP
+      </div>
+
+      <h1>
+        Donde el estilo, la actitud y la
+        <span class="hero-gradient-text">creatividad</span> se encuentran.
+      </h1>
+
+      <p class="hero-lead">
+        Plataforma digital independiente nacida en Panamá con visión latinoamericana.
+        Conectamos a nuestra comunidad con lo más vibrante de la cultura urbana, tecnología, estilo de vida y
+        creatividad sin límites.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#mascota" class="btn-primary">
+          <i class="fas fa-crown"></i> Conoce a Flowy
+        </a>
+        <a href="#contacto" class="btn-secondary">
+          <i class="fas fa-envelope"></i> Contáctanos
+        </a>
+      </div>
+
+      <div class="hero-indicators">
+        <div class="indicator-item">
+          <span class="indicator-val">100%</span>
+          <span class="indicator-lbl">Cultura Urbana</span>
+        </div>
+        <div class="indicator-divider"></div>
+        <div class="indicator-item">
+          <span class="indicator-val">10K+</span>
+          <span class="indicator-lbl">Comunidad Digital</span>
+        </div>
+        <div class="indicator-divider"></div>
+        <div class="indicator-item">
+          <span class="indicator-val">🇵🇦 LATAM</span>
+          <span class="indicator-lbl">Sede Panamá</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Mascot Interactive Showcase Card -->
+    <div class="hero-right">
+      <div class="mascot-showcase-card">
+        <div class="mascot-ambient-glow"></div>
+
+        <div class="mascot-card-top">
+          <div class="mascot-badge">
+            <i class="fas fa-sparkles"></i> Mascota Oficial
+          </div>
+          <span class="mascot-edition">Edición 2026</span>
+        </div>
+
+        <div class="mascot-img-wrap">
+          <!-- 📷 IMAGEN PRINCIPAL DEL PERSONAJE: Reemplaza en img/personajes/personaje-1.png -->
+          <img src="img/personajes/personaje-1.png" alt="Mascota Oficial Flow Withre" class="mascot-img"
+            id="hero-mascot-img">
+        </div>
+
+        <div class="mascot-card-footer">
+          <div class="mascot-title-row">
+            <div class="mascot-name">Flowy <span>#01</span></div>
+            <div class="mascot-role" id="mascot-role-text">Streetwear & Outfit Principal</div>
+          </div>
+
+          <div class="mascot-pose-selector">
+            <button type="button" class="pose-btn active" data-pose="standing">
+              <i class="fas fa-person"></i> Principal
+            </button>
+            <button type="button" class="pose-btn" data-pose="laptop">
+              <i class="fas fa-laptop-code"></i> Studio
+            </button>
+            <button type="button" class="pose-btn" data-pose="headphones">
+              <i class="fas fa-headphones"></i> Gamer
+            </button>
+            <button type="button" class="pose-btn" data-pose="crouch">
+              <i class="fas fa-bolt"></i> Flow
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline-divider"></div>
+
+  <!-- ===== SOBRE NOSOTROS ===== -->
+  <section class="about-section" id="nosotros">
+    <div class="section-container">
+      <div class="section-head">
+        <span class="section-badge"><i class="fas fa-circle-info"></i> Sobre Nosotros</span>
+        <h2 class="section-title">Cultura digital sin filtros</h2>
+        <p class="section-desc">
+          En Flow Withre combinamos curaduría editorial, visión moderna y lenguaje callejero para construir un espacio
+          auténtico para las nuevas generaciones.
+        </p>
+      </div>
+
+      <div class="about-cards-grid">
+        <div class="about-card">
+          <div class="about-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Misión</h3>
+          <p>Crear contenido de calidad que inspire, informe y entretenga a nuestra comunidad con autenticidad, criterio
+            y actitud propia.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i class="fas fa-eye"></i></div>
+          <h3>Visión</h3>
+          <p>Ser la plataforma de referencia de la cultura urbana y digital en Latinoamérica, expandiéndonos a nuevos
+            formatos multimedia y eventos.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i class="fas fa-fire"></i></div>
+          <h3>Valores</h3>
+          <p>Autenticidad, creatividad y excelencia visual. Nos mueve hacer las cosas con estilo propio y dejar huella
+            en cada pieza.</p>
+        </div>
+      </div>
+
+      <div class="about-metrics">
+        <div class="metric-box">
+          <div class="metric-num">5+</div>
+          <div class="metric-lbl">Canales de Contenido</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-num">10K+</div>
+          <div class="metric-lbl">Seguidores en Redes</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-num">2024</div>
+          <div class="metric-lbl">Año de Fundación</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-num">100%</div>
+          <div class="metric-lbl">Independiente</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline-divider"></div>
+
+  <!-- ===== UNIVERSO FLOWY (MASCOTA OFICIAL) ===== -->
+  <section class="mascot-universe-section" id="mascota">
+    <div class="section-container">
+      <div class="mascot-universe-grid">
+        <div class="mascot-narrative">
+          <span class="section-badge"><i class="fas fa-crown"></i> Ícono de Marca</span>
+          <h3>Conoce a Flowy: La Esencia de Flow Withre</h3>
+          <p>
+            Flowy no es solo un personaje; es la encarnación visual de nuestra comunidad: streetwear impecable, lentes
+            oscuros para mantener el enfoque, hoodie icónico con corona bordada y zapatillas listas para recorrer la
+            ciudad.
+          </p>
+          <p>
+            Ya sea trabajando frente a la laptop en producciones creativas, compitiendo en torneos de gaming o viviendo
+            la
+            adrenalina de los autos y deportes, Flowy representa el espíritu de hacer lo que amas con actitud
+            inquebrantable.
+          </p>
+
+          <div class="mascot-traits">
+            <div class="trait-item">
+              <i class="fas fa-shirt trait-icon"></i>
+              <span class="trait-name">Estilo Streetwear</span>
+            </div>
+            <div class="trait-item">
+              <i class="fas fa-laptop-code trait-icon"></i>
+              <span class="trait-name">Creador Digital</span>
+            </div>
+            <div class="trait-item">
+              <i class="fas fa-gamepad trait-icon"></i>
+              <span class="trait-name">Gaming Enthusiast</span>
+            </div>
+            <div class="trait-item">
+              <i class="fas fa-headphones trait-icon"></i>
+              <span class="trait-name">Sound & Beats</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mascot-lookbook-grid">
+          <!-- 📷 PERSONAJE 2: Reemplaza en img/personajes/personaje-2.png -->
+          <div class="lookbook-card">
+            <div class="lookbook-img-frame">
+              <span class="lookbook-badge">Studio Session</span>
+              <img src="img/personajes/personaje-2.png" alt="Flowy en el estudio de creación">
+            </div>
+            <div class="lookbook-info">
+              <h4>El Creador</h4>
+              <p>Edición de contenido, producción digital y tecnología al máximo rendimiento.</p>
+            </div>
+          </div>
+
+          <!-- 📷 PERSONAJE 3: Reemplaza en img/personajes/personaje-3.png -->
+          <div class="lookbook-card">
+            <div class="lookbook-img-frame">
+              <span class="lookbook-badge">Gamer Mode</span>
+              <img src="img/personajes/personaje-3.png" alt="Flowy con audífonos gaming">
+            </div>
+            <div class="lookbook-info">
+              <h4>El Competidor</h4>
+              <p>Inmersión total en esports, streams en vivo y las mejores bandas sonoras.</p>
+            </div>
+          </div>
+
+          <!-- 📷 PERSONAJE 4: Reemplaza en img/personajes/personaje-4.png -->
+          <div class="lookbook-card">
+            <div class="lookbook-img-frame">
+              <span class="lookbook-badge">Street Attitude</span>
+              <img src="img/personajes/personaje-4.png" alt="Flowy en pose urbana">
+            </div>
+            <div class="lookbook-info">
+              <h4>Actitud Urbana</h4>
+              <p>Presencia callejera, zapatillas blancas clásicas y gorra coronada.</p>
+            </div>
+          </div>
+
+          <div class="lookbook-card">
+            <div class="lookbook-img-frame">
+              <span class="lookbook-badge">Flow & Attitude</span>
+              <img src="img/personajes/personaje-5.png" alt="Flowy con actitud urbana">
+            </div>
+            <div class="lookbook-info">
+              <h4>La Actitud</h4>
+              <p>Energía, autenticidad y el estilo urbano que define a nuestra comunidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline-divider"></div>
+
+  <!-- ===== SOCIO ESTRATÉGICO ===== -->
+  <section class="partner-section" id="socios">
+    <div class="section-container">
+      <div class="partner-box">
+        <div class="partner-content">
+          <div class="partner-badge">
+            <i class="fas fa-handshake"></i> Alianza Tecnológica Oficial
+          </div>
+          <h3>AX Network Solutions</h3>
+          <p>
+            Desarrollo web de alto rendimiento, ingeniería de software y arquitectura digital que impulsa el ecosistema
+            de
+            Flow Withre Corp.
+          </p>
+        </div>
+        <div class="partner-action-wrap">
+          <img src="img/AX Network BLANCO - copia.png" alt="AX Network Solutions" class="partner-logo-img">
+          <a href="https://axnetworksolutions.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="partner-visit-btn">
+            <span>Visitar Sitio Oficial</span> <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline-divider"></div>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="contact-section" id="contacto">
+    <div class="section-container">
+      <div class="contact-layout">
+        <!-- Columna Izquierda: Información -->
+        <div class="contact-info-col">
+          <span class="section-badge"><i class="fas fa-envelope"></i> Canal Directo</span>
+          <h2>Inicia la conversación</h2>
+          <p class="contact-lead">
+            ¿Tienes una propuesta comercial, patrocinio, colaboración de contenido o quieres compartir tu proyecto?
+            Escríbenos y te responderemos a la brevedad.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method-card">
+              <div class="method-icon"><i class="fas fa-envelope-open-text"></i></div>
+              <div class="method-details">
+                <span class="method-label">Correo Electrónico</span>
+                <span class="method-value">
+                  <a href="mailto:flowwithrecorp@gmail.com">flowwithrecorp@gmail.com</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="method-icon"><i class="fas fa-location-dot"></i></div>
+              <div class="method-details">
+                <span class="method-label">Sede Principal</span>
+                <span class="method-value">Ciudad de Panamá, Panamá 🇵🇦</span>
+              </div>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="method-icon"><i class="fas fa-clock"></i></div>
+              <div class="method-details">
+                <span class="method-label">Atención y Soporte</span>
+                <span class="method-value">Lunes a Viernes · 9:00 AM – 6:00 PM EST</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social-wrap">
+            <p>Comunidad y Canales:</p>
+            <div class="social-links">
+              <a href="https://instagram.com/axnetworkstudio" target="_blank" rel="noopener noreferrer"
+                class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" class="social-link" title="Spotify"><i class="fab fa-spotify"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Formulario EmailJS -->
+        <div class="contact-form-card">
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="fas fa-user"></i> Nombre</label>
+                <input type="text" name="user_name" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-user"></i> Apellido</label>
+                <input type="text" name="user_lastname" placeholder="Tu apellido" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fas fa-envelope"></i> Correo Electrónico</label>
+              <input type="email" name="user_email" placeholder="tu@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fas fa-tag"></i> Asunto</label>
+              <select name="subject" id="contact-subject" title="Asunto de contacto" required>
+                <option value="" disabled selected>Selecciona un tema</option>
+                <option value="Colaboración / Patrocinio">Colaboración / Patrocinio</option>
+                <option value="Propuesta de contenido">Propuesta de contenido</option>
+                <option value="Membresía Exclusiva">Membresía Exclusiva</option>
+                <option value="Prensa / Medios">Prensa / Medios</option>
+                <option value="Soporte técnico">Soporte técnico</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fas fa-message"></i> Mensaje</label>
+              <textarea name="message" placeholder="Describe tu propuesta o consulta..." rows="5" required></textarea>
+            </div>
+
+            <div class="form-alert" id="contact-alert"></div>
+
+            <button type="submit" class="form-submit-btn contact-submit">
+              <i class="fas fa-paper-plane"></i> Enviar Mensaje
+            </button>
+          </form>
+
+          <div class="form-success-box" id="contact-success">
+            <div class="success-icon-wrap"><i class="fas fa-check"></i></div>
+            <h3>¡Mensaje Enviado con Éxito!</h3>
+            <p>Gracias por contactarnos. Nuestro equipo te responderá a la brevedad posible.</p>
+            <button type="button" class="btn-reset-form" id="contact-reset-btn">
+              <i class="fas fa-rotate-left"></i> Enviar otro mensaje
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="main-footer">
+    <div class="footer-top-grid">
+      <div class="footer-brand-col">
+        <!-- 🎨 LOGO OFICIAL (Con texto blanco de alto contraste para fondo oscuro) -->
+        <img src="img/logo-white-version.png" alt="Logo Flow Withre" class="footer-logo-img">
+        <p class="footer-about">
+          Donde el estilo, la actitud y la creatividad se encuentran. Cultura urbana, gaming y tendencias digitales sin
+          compromisos.
+        </p>
+        <div class="social-links">
+          <a href="https://instagram.com/axnetworkstudio" target="_blank" rel="noopener noreferrer" class="social-link"
+            title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#mascota">Mascota Flowy</a></li>
+          <li><a href="#socios">Socio Tecnológico</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ecosistema</h4>
+        <ul class="footer-nav-list">
+          <li><a href="#nosotros">Identidad de Marca</a></li>
+          <li><a href="#mascota">Universo Flowy</a></li>
+          <li><a href="#socios">Alianza AX Network</a></li>
+          <li><a href="#contacto">Prensa & Colaboraciones</a></li>
+          <li><a href="#inicio" onclick="document.getElementById('open-modal').click(); return false;">Club
+              Exclusivo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto & Alianza</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>flowwithrecorp@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-pin"></i>
+          <span>Ciudad de Panamá, Panamá</span>
+        </div>
+
+        <div class="footer-dev-credit">
+          <span class="dev-label">Desarrollado por</span>
+          <a href="https://axnetworksolutions.vercel.app/" target="_blank" rel="noopener noreferrer"
+            class="dev-logo-link" title="AX Network Solutions">
+            <img src="img/AX Network BLANCO - copia.png" alt="AX Network Solutions">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <span>&copy; 2026 Flow Withre Corp. Todos los derechos reservados.</span>
+      <span>Diseño y tecnología por <a href="https://axnetworksolutions.vercel.app/" target="_blank"
+          rel="noopener noreferrer">AX Network Solutions</a>.</span>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL MEMBRESÍA ===== -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close" aria-label="Cerrar modal">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <div class="modal-badge"><i class="fas fa-crown"></i> Acceso Exclusivo</div>
+      <h2>Únete al Club Flow Withre</h2>
+      <p>Accede a contenido VIP, lanzamientos antes que nadie, sorteos especiales y beneficios comunitarios.</p>
+
+      <form id="member-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" name="member_name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label>Apellido</label>
+            <input type="text" name="member_lastname" placeholder="Tu apellido" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Correo Electrónico</label>
+          <input type="email" name="member_email" placeholder="tu@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="member_country">País</label>
+          <select name="member_country" id="member_country" title="País de residencia" required>
+            <option value="" disabled selected>Selecciona tu país</option>
+            <option value="Panamá">Panamá</option>
+            <option value="México">México</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Chile">Chile</option>
+            <option value="Perú">Perú</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="España">España</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="member_interest">Área de Mayor Interés</label>
+          <select name="member_interest" id="member_interest" title="Área de mayor interés">
+            <option value="" disabled selected>¿Qué te apasiona más?</option>
+            <option value="Eventos & Lanzamientos">Eventos & Lanzamientos</option>
+            <option value="Streetwear & Merch">Streetwear & Merch</option>
+            <option value="Cultura Urbana & Media">Cultura Urbana & Media</option>
+            <option value="Comunidad VIP">Comunidad VIP</option>
+            <option value="Todo el ecosistema">Todo el ecosistema</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>¿Por qué te gustaría ser miembro? (opcional)</label>
+          <textarea name="member_reason" placeholder="Cuéntanos un poco sobre ti..."></textarea>
+        </div>
+
+        <div class="form-alert" id="member-alert"></div>
+
+        <button type="submit" class="form-submit-btn">
+          <i class="fas fa-crown"></i> Solicitar Membresía
+        </button>
+      </form>
+
+      <div class="form-success-box" id="form-success">
+        <div class="success-icon-wrap"><i class="fas fa-check"></i></div>
+        <h3>¡Bienvenido al Club!</h3>
+        <p>Tu solicitud ha sido registrada correctamente. Te contactaremos pronto con tus credenciales y accesos.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <!-- EmailJS SDK Oficial -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/preloader.js"></script>
+  <script src="js/email.js"></script>
+  <script src="js/menu.js"></script>
+  <script>
+    // ---- Modal Membresía (Apertura y Cierre) ----
+    const openBtn = document.getElementById('open-modal');
+    const overlay = document.getElementById('modal-overlay');
+    const closeBtn = document.getElementById('modal-close');
+    if (openBtn) openBtn.addEventListener('click', () => overlay.classList.add('open'));
+    if (closeBtn) closeBtn.addEventListener('click', () => overlay.classList.remove('open'));
+    if (overlay) overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('open'); });
+  </script>
+
+</body>
+
+</html>
